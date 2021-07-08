@@ -1,0 +1,72 @@
+
+  <!-- shop section -->
+{% extends 'base.html' %}
+{% block title %}Gift Cards{% endblock title %}
+{% block content %}
+ <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          All Cards
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="../static/images/{{latest.image}}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  {{latest.name}}
+                </h6>
+                <h6>
+                  Price:
+                  <span>
+                    ${{latest.price}}
+                  </span>
+                </h6>
+              </div>
+              <div class="new">
+                <span>
+                  Featured
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% for card in all %}
+        <div class="col-sm-6 col-xl-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="../static/images/{{card.image}}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  {{card.name}}
+                </h6>
+                <h6>
+                  Price:
+                  <span>
+                    ${{card.price}}
+                  </span>
+                </h6>
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+       
+      </div>
+    </div>
+  </section>
+ 
+{% endblock content %}
+  <!-- end shop section -->
