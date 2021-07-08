@@ -7,4 +7,5 @@ urlpatterns = [
     path('about',views.About,name="About"),
     path('contact',views.Contact,name="Contact"),
     path('index',views.Home,name="Home"),
+    path('singleCard/idOfCard=<int:idOfCard>',views.SingleCard,name="Single Card"),
 ]
