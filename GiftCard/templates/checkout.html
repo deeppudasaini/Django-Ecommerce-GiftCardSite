@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Checkout{% endblock title %}
+{% block content %}
+<form action="/create-checkout-session" method="POST">
+{% csrf_token %}
+      <button type="submit">Checkout</button>
+    </form>
+{% endblock content %}
+
+
+
+
